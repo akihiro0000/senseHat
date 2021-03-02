@@ -13,7 +13,7 @@ while True:
     orientation = sense.get_orientation()
     pitch = '"' + "pitch" + '"' + ":" + '"' + str(round(orientation["pitch"], 0)) + '"'
     roll = '"' + "roll" + '"' + ":" + '"' + str(round(orientation["roll"], 0)) + '"'
-    yaw = '"' + "roll" + '"' + ":" + '"' + str(round(orientation["yaw"], 0)) + '"'
+    yaw = '"' + "yaw" + '"' + ":" + '"' + str(round(orientation["yaw"], 0)) + '"'
     
     
     acceleration = sense.get_accelerometer_raw()
