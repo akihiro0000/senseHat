@@ -2,10 +2,10 @@ from sense_hat import SenseHat
 import time
 
 sense = SenseHat()
+t0 = time.time()
 while True:
-  t0 = time.time()
-  
-  if ((time.time() - t0) > 60):
+ 
+  if (time.time() - t0) % 60==0:
     t = sense.get_temperature()
     p = sense.get_pressure()
     h = sense.get_humidity()
