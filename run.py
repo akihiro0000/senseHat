@@ -17,9 +17,9 @@ while True:
     
     
     acceleration = sense.get_accelerometer_raw()
-    x = '"' + "x" + '"' + ":" + '"' + round(str(acceleration['x']),0) + '"'
-    y = '"' + "y" + '"' + ":" + '"' + round(str(acceleration['y']),0) + '"'
-    z = '"' + "z" + '"' + ":" + '"' + round(str(acceleration['z']),0) + '"'
+    x = '"' + "x" + '"' + ":" + '"' + str(round(acceleration['x'], 0)) + '"'
+    y = '"' + "y" + '"' + ":" + '"' + str(round(acceleration['y'], 0)) + '"'
+    z = '"' + "z" + '"' + ":" + '"' + str(round(acceleration['z'], 0)) + '"'
     
     mylist = [t,p,h,pitch,roll,yaw,x,y,z]
     mystr = '{' + ','.join(map(str,mylist))+'}'
