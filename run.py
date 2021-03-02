@@ -6,10 +6,9 @@ t0 = time.time()
 while True:
  
   if (time.time() - t0) % 60==0:
-    t = sense.get_temperature()
-    p = sense.get_pressure()
-    h = sense.get_humidity()
-    t = round(t, 1)
-    p = round(p, 1)
-    h = round(h, 1)
-    print(t)
+    t = '"' + "temperature[degree]" + '"' + ":" + '"' + str(round(sense.get_temperature(), 1)) + '"'
+    p = '"' + "pressure[hPa]" + '"' + ":" + '"' + str(round(sense.get_pressure(), 1)) + '"'
+    h = '"' + "humidity[%]" + '"' + ":" + '"' + str(round(sense.get_humidity(), 1)) + '"'
+    mylist = [t,p,h]
+    mystr = '{' + ','.join(map(str,mylist))+'}'
+    print(mystr)
